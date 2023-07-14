@@ -2,16 +2,18 @@
 
 @Component({
   selector: 'app-github-configuration',
-  templateUrl: './github-configuration.component.html',
-  styleUrls: ['./github-configuration.component.css'],
+  template: `
+    <h2>Github Configuration</h2>
+    <p>{{error}}</p>
+  `
 })
-export class GithubConfigurationComponent implements OnInit {
-  errorMessage: string;
 
-  constructor() {
-    this.errorMessage =
-      "'NoneType' object has no attribute 'replace'";
+export class GithubConfigurationComponent implements OnInit {
+  error: string = `'NoneType' object has no attribute 'replace'`;
+
+  constructor() { }
+
+  ngOnInit(): void {
   }
 
-  ngOnInit(): void {}
 }
